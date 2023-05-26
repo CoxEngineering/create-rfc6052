@@ -54,14 +54,6 @@ The following yaml lists must be passed to the module:
 
 With the following output that can be leveraged in your other plays and roles:
 
-```bash
-PLAY [Create RFC6052 IPv6 address list] ***************************************************
-
-TASK [Get list using pyswmap] *************************************************************
-changed: [localhost]
-
-TASK [debug] ******************************************************************************
-```
 ```json
 ok: [localhost] => {
     "dmrcalc_output.meta": [
