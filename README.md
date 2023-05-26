@@ -8,7 +8,8 @@ This is useful as it allows a provider to offload common customer MAP-T traffic 
 ## Dependancies ##
 This code was inspired by (and requires):
 
-* python3
+* ansible (obviously)
+* python3 (and the ipaddress package)
 * pyswmap
 
   https://github.com/ejordangottlieb/pyswmap
