@@ -24,6 +24,12 @@ Install pysmap in one of two ways:
 
 Copy the createRFC6052IPv6.py to your ansbile library location.
 
+### Inputs ###
+
+The following yaml lists must be passed to the module:
+- dmrIPs (one or more /64 IPv6 prefixes representing the DMRs you want to encode addresses INTO)
+- ipv4s (one or more IPv4 host IPs you want to generate the RFC6052 equivilancies of)
+
 ### Sample Playbook ###
 
 ```yaml
@@ -48,13 +54,15 @@ Copy the createRFC6052IPv6.py to your ansbile library location.
 
 With the following output that can be leveraged in your other plays and roles:
 
-```json
-PLAY [Create RFC6052 IPv6 address list] ************************************************************************
+```bash
+PLAY [Create RFC6052 IPv6 address list] ***************************************************
 
-TASK [Get list using pyswmap] **********************************************************************************
+TASK [Get list using pyswmap] *************************************************************
 changed: [localhost]
 
-TASK [debug] ***************************************************************************************************
+TASK [debug] ******************************************************************************
+```
+```json
 ok: [localhost] => {
     "dmrcalc_output.meta": [
         "2600:1234:bfff:fffe:8:808:800:0",
